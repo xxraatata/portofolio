@@ -898,6 +898,57 @@
       margin-bottom: 20px;
     }
 
+    /* =====================================================
+       SMALL PROJECT IMAGE (GAMBAR GRID)
+    ====================================================== */
+    .small-project {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .small-project-visual {
+      margin-bottom: 24px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--bg);
+    }
+
+    .small-project-visual img {
+      width: 100%;
+      height: 200px; /* Dibuat fix agar tinggi kotak seragam */
+      object-fit: cover; 
+      object-position: top;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .small-project:hover .small-project-visual img {
+      transform: scale(1.05); /* Efek zoom halus saat kotak di-hover */
+    }
+
+    /* =====================================================
+       TOMBOL LINK PROJECT
+    ====================================================== */
+    .demo-link {
+      display: inline-block;
+      padding: 8px 16px;
+      margin-top: 24px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--ink);
+      transition: .2s ease;
+    }
+
+    .demo-link:hover {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: white;
+      transform: translateY(-2px);
+    }
+
 
     /* =====================================================
        ORGANIZATION
@@ -1211,6 +1262,47 @@
       transform: translateY(0);
     }
 
+    /* =====================================================
+       CUSTOM TOOLTIP (MUNCUL INSTAN)
+    ====================================================== */
+
+    /* Membuat kotak hitam tooltip-nya */
+    .visual-label::after {
+      content: attr(data-tooltip); /* Mengambil teks dari atribut data-tooltip */
+      position: absolute;
+      bottom: 130%; /* Muncul tepat di atas label */
+      right: 0;
+      width: max-content;
+      max-width: 250px; /* Lebar maksimal teks */
+      padding: 10px 14px;
+      
+      background: var(--ink); /* Pakai warna hitam dari temamu */
+      color: white;
+      border-radius: 8px;
+      
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 12px;
+      text-transform: none;
+      letter-spacing: normal;
+      text-align: right;
+      
+      pointer-events: none;
+      box-shadow: 0 10px 25px rgba(16, 24, 39, 0.15);
+      
+      /* Animasi sembunyi */
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s ease-out;
+    }
+
+    /* Memunculkan kotak saat di-hover */
+    .visual-label:hover::after {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
 
     /* =====================================================
        RESPONSIVE
@@ -1481,7 +1573,7 @@
             <!-- GANTI FOTO DI SINI -->
 
             <img
-              src="fotoProfile.jpeg"
+              src="img/fotoProfile.jpeg"
               alt="Foto Tsaniyah Azzahra"
               class="hero-photo"
             >
@@ -1903,11 +1995,11 @@
             <!-- GANTI DENGAN SCREENSHOT PROJECT -->
 
             <img
-              src="fotoLayoutInspec_1.png"
+              src="img/fotoLayoutInspec_1.png"
               alt="Tangkapan layar Sistem Request Layout Inspection Part menggunakan data dummy yang telah dimodifikasi untuk keperluan portofolio."
             >
 
-            <div class="visual-label" title="Tangkapan layar Sistem Request Layout Inspection Part menggunakan data dummy yang telah dimodifikasi untuk keperluan portofolio.">
+            <div class="visual-label" data-tooltip="Dashboard Sistem Request Layout Inspection Part, menampilkan data dummy untuk menjaga kerahasiaan informasi perusahaan.">
               TUGAS AKHIR · 2026
             </div>
 
@@ -1983,11 +2075,11 @@
           <div class="project-visual reveal">
 
             <img
-              src="fotoKalibrasi_1.png"
+              src="img/fotoKalibrasi_1.png"
               alt="Dashboard Sistem Manajemen Kalibrasi QA, menampilkan data dummy untuk menjaga kerahasiaan informasi perusahaan."
             >
 
-            <div class="visual-label" title="Dashboard Sistem Manajemen Kalibrasi QA, menampilkan data dummy untuk menjaga kerahasiaan informasi perusahaan.">
+            <div class="visual-label" data-tooltip="Dashboard Sistem Manajemen Kalibrasi QA, menampilkan data dummy untuk menjaga kerahasiaan informasi perusahaan.">
               SISTEM KALIBRASI
             </div>
 
@@ -2004,158 +2096,147 @@
 
         <div class="other-projects">
 
-
           <!-- GS BATTERY -->
-
           <article class="small-project reveal">
+            
+            <!-- GAMBAR GS BATTERY -->
+            <div class="small-project-visual">
+              <img src="img/fotoHCRecruitment_1.png" alt="Dashboard Sistem Rekrutmen GS Battery">
+            </div>
 
             <div class="project-number">
               03 — WEB DEVELOPMENT
             </div>
 
-
             <h3>
-              Sistem Digital Human Capital Recruitment
+              Human Capital Recruitment
             </h3>
-
 
             <div class="project-company">
               PT GS Battery · 2025-2026
             </div>
 
-
             <p>
-
               Sistem berbasis web untuk mendukung proses
               recruitment, mulai dari pengelolaan lowongan,
               data kandidat, penjadwalan proses seleksi,
               hingga pemantauan status kandidat.
-
             </p>
 
-
             <div class="project-tech">
-
-              <span class="tech">
-                C#
-              </span>
-
-              <span class="tech">
-                ASP.NET
-              </span>
-
-              <span class="tech">
-                DevExpress
-              </span>
-
-              <span class="tech">
-                SQL Server
-              </span>
-
+              <span class="tech">C#</span>
+              <span class="tech">ASP.NET</span>
+              <span class="tech">DevExpress</span>
+              <span class="tech">SQL Server</span>
             </div>
+
+            <!-- TOMBOL LINK WEBSITE -->
+            <a href="https://career.gs.astra.co.id/" target="_blank" rel="noopener" class="demo-link">
+              Kunjungi Website ↗
+            </a>
 
           </article>
 
 
-
           <!-- ESSA -->
-
           <article class="small-project reveal">
+
+            <!-- GAMBAR ESSA -->
+            <div class="small-project-visual">
+              <img src="img/fotoOvertime_1.png" alt="Aplikasi ESSA Overtime">
+            </div>
 
             <div class="project-number">
               04 — WEB DEVELOPMENT
             </div>
 
-
             <h3>
               Overtime Collecting Application
             </h3>
-
 
             <div class="project-company">
               Politeknik Astra · 2024
             </div>
 
-
             <p>
-
-              Aplikasi untuk mendukung proses pengajuan dan
+              Sistem berbasis web untuk mendukung proses pengajuan dan
               pengelolaan lembur karyawan di Politeknik Astra dengan 
               alur persetujuan serta pemantauan status pengajuan.
-
             </p>
 
-
             <div class="project-tech">
-
-              <span class="tech">
-                C#
-              </span>
-
-              <span class="tech">
-                ASP.NET
-              </span>
-
-              <span class="tech">
-                PHP (Laravel)
-              </span>
-
-              <span class="tech">
-                SQL Server
-              </span>
-
+              <span class="tech">C#</span>
+              <span class="tech">ASP.NET</span>
+              <span class="tech">PHP (Laravel)</span>
+              <span class="tech">SQL Server</span>
             </div>
 
           </article>
 
 
-
           <!-- RAVELLO -->
-
           <article class="small-project reveal">
+
+            <!-- GAMBAR RAVELLO -->
+            <div class="small-project-visual">
+              <img src="img/fotoRavello_1.png" alt="Tampilan Aplikasi Mobile Ravello">
+            </div>
 
             <div class="project-number">
               05 — MOBILE DEVELOPMENT
             </div>
 
-
             <h3>
-              Ravello
+              Ravello Application
             </h3>
-
 
             <div class="project-company">
               Politeknik Astra · 2025
             </div>
 
-
             <p>
-
               Aplikasi mobile untuk membantu pengguna
               menemukan informasi kuliner, memberikan ulasan,
               serta berbagi foto dan informasi tempat.
-
             </p>
 
-
             <div class="project-tech">
-
-              <span class="tech">
-                React Native
-              </span>
-
-              <span class="tech">
-                Java Spring Boot
-              </span>
-
-              <span class="tech">
-                SQL Server
-              </span>
-
+              <span class="tech">React Native</span>
+              <span class="tech">Java Spring Boot</span>
+              <span class="tech">SQL Server</span>
             </div>
 
           </article>
 
+          <!-- TETRIS GAME -->
+          <article class="small-project reveal">
+
+            <div class="small-project-visual">
+              <img src="img/fotoTetris_1.png" alt="Tampilan Game Tetris">
+            </div>
+
+            <div class="project-number">
+              06 — GAME DEVELOPMENT
+            </div>
+
+            <h3>
+              Tetris Game
+            </h3>
+
+            <div class="project-company">
+              Politeknik Astra · 2024
+            </div>
+
+            <p>
+              Game puzzle klasik Tetris yang dikembangkan sebagai aplikasi dekstop.
+            </p>
+
+            <div class="project-tech">
+              <span class="tech">Java</span>
+              <span class="tech">SQL Server</span>
+            </div>
+
+          </article>
 
         </div>
 
@@ -2225,12 +2306,12 @@
               <!-- GANTI FOTO ORGANISASI -->
 
               <img
-                src="bem-1.jpg"
+                src="img/fotoMensos_1.jpeg"
                 alt="Kegiatan BEM"
               >
 
               <img
-                src="bem-2.jpg"
+                src="img/fotoMensos_2.jpg"
                 alt="Kegiatan BEM"
               >
 
