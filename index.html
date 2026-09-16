@@ -1,0 +1,2613 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tsaniyah Azzahra — Portofolio</title>
+
+  <meta
+    name="description"
+    content="Portofolio Tsaniyah Azzahra — Pengembang Sistem Informasi."
+  >
+
+  <!-- =========================
+       FONT
+  ========================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =====================================================
+       ROOT
+    ====================================================== */
+
+    :root {
+      --bg: #F7F8FC;
+      --paper: #FFFFFF;
+
+      --ink: #101827;
+      --ink-soft: #596477;
+      --ink-muted: #89929D;
+
+      --accent: #3157D5;
+      --accent-soft: #E8ECFF;
+
+      --line: rgba(16, 24, 39, 0.12);
+      --line-strong: rgba(16, 24, 39, 0.22);
+
+      --radius: 18px;
+      --max-width: 1180px;
+    }
+
+
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+
+      font-family:
+        'IBM Plex Sans',
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+      font-size: 16px;
+      line-height: 1.65;
+
+      -webkit-font-smoothing: antialiased;
+
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: white;
+    }
+
+
+    /* =====================================================
+       BACKGROUND DETAILS
+    ====================================================== */
+
+    body::before {
+      content: "";
+      position: fixed;
+
+      width: 520px;
+      height: 520px;
+
+      top: -220px;
+      right: -180px;
+
+      background: var(--accent-soft);
+
+      border-radius: 50%;
+
+      opacity: .55;
+
+      pointer-events: none;
+
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+
+      position: fixed;
+
+      width: 360px;
+      height: 360px;
+
+      bottom: -180px;
+      left: -150px;
+
+      background: var(--warm);
+
+      border-radius: 50%;
+
+      opacity: .7;
+
+      pointer-events: none;
+
+      z-index: -2;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ====================================================== */
+
+    .nav {
+      position: sticky;
+      top: 0;
+
+      z-index: 100;
+
+      width: 100%;
+
+      border-bottom: 1px solid var(--line);
+
+      background: rgba(245, 245, 241, .88);
+
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+
+      margin: auto;
+
+      padding: 16px 28px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Fraunces', serif;
+
+      font-size: 20px;
+      font-weight: 500;
+
+      letter-spacing: -.02em;
+    }
+
+    .nav-logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 11px;
+    }
+
+    .nav-links a {
+      color: var(--ink-soft);
+
+      transition: .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+
+    /* =====================================================
+       GLOBAL
+    ====================================================== */
+
+    .container {
+      max-width: var(--max-width);
+
+      margin: auto;
+
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+
+    section {
+      padding: 110px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      margin-bottom: 26px;
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 11px;
+
+      color: var(--ink-muted);
+
+      text-transform: uppercase;
+
+      letter-spacing: .06em;
+    }
+
+    .section-label::before {
+      content: "";
+
+      width: 28px;
+      height: 1px;
+
+      background: var(--accent);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Fraunces', serif;
+
+      font-weight: 500;
+
+      letter-spacing: -.025em;
+    }
+
+
+    /* =====================================================
+       HERO
+    ====================================================== */
+
+    .hero {
+      min-height: calc(100vh - 62px);
+
+      display: flex;
+      align-items: center;
+
+      padding: 90px 0 100px;
+    }
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns: 1.15fr .85fr;
+
+      gap: 90px;
+
+      align-items: center;
+    }
+
+    .availability {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      margin-bottom: 25px;
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 11px;
+
+      color: var(--ink-soft);
+    }
+
+    .availability-dot {
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+
+      background: #58785D;
+
+      box-shadow:
+        0 0 0 4px rgba(88, 120, 93, .12);
+    }
+
+    .hero h1 {
+      font-size: clamp(58px, 8vw, 108px);
+
+      line-height: .92;
+
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      display: block;
+
+      color: var(--accent);
+    }
+
+    .hero-description {
+      max-width: 590px;
+
+      color: var(--ink-soft);
+
+      font-size: 18px;
+
+      line-height: 1.7;
+
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      padding: 12px 18px;
+
+      border: 1px solid var(--line-strong);
+
+      border-radius: 999px;
+
+      font-size: 13px;
+
+      transition: .25s ease;
+    }
+
+    .button.primary {
+      background: var(--ink);
+
+      border-color: var(--ink);
+
+      color: white;
+    }
+
+    .button.primary:hover {
+      background: var(--accent);
+
+      border-color: var(--accent);
+
+      transform: translateY(-2px);
+    }
+
+    .button.secondary:hover {
+      border-color: var(--accent);
+
+      color: var(--accent);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =====================================================
+       HERO PHOTO
+    ====================================================== */
+
+    .hero-photo-wrap {
+      position: relative;
+
+      max-width: 400px;
+
+      margin-left: auto;
+    }
+
+    .hero-photo-bg {
+      position: absolute;
+
+      inset: 22px -20px -20px 20px;
+
+      background: var(--accent-soft);
+
+      border-radius: 30px;
+
+      transform: rotate(3deg);
+
+      z-index: 0;
+    }
+
+    .hero-photo {
+      position: relative;
+
+      z-index: 2;
+
+      width: 100%;
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+      border-radius: 26px;
+
+      border: 1px solid var(--line-strong);
+
+      background: var(--paper);
+    }
+
+    .photo-note {
+      position: absolute;
+
+      z-index: 3;
+
+      left: -32px;
+      bottom: 28px;
+
+      padding: 12px 15px;
+
+      background: var(--paper);
+
+      border: 1px solid var(--line);
+
+      border-radius: 10px;
+
+      box-shadow: 0 10px 30px rgba(23, 35, 49, .08);
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 9px;
+
+      line-height: 1.6;
+
+      color: var(--ink-soft);
+
+      transform: rotate(-3deg);
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ====================================================== */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: .65fr 1.35fr;
+
+      gap: 80px;
+    }
+
+    .about-title {
+      font-size: clamp(34px, 4vw, 52px);
+
+      line-height: 1.05;
+    }
+
+    .about-text {
+      max-width: 700px;
+
+      font-size: 19px;
+
+      color: var(--ink-soft);
+
+      line-height: 1.8;
+    }
+
+    .about-text strong {
+      color: var(--ink);
+
+      font-weight: 500;
+    }
+
+    .about-note {
+      margin-top: 32px;
+
+      padding: 18px 20px;
+
+      background: var(--paper);
+
+      border-left: 3px solid var(--accent);
+
+      border-radius: 0 12px 12px 0;
+
+      color: var(--ink-soft);
+
+      font-size: 14px;
+    }
+
+
+    /* =====================================================
+       SKILLS
+    ====================================================== */
+
+    .skills-header {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: end;
+
+      gap: 30px;
+
+      margin-bottom: 55px;
+    }
+
+    .skills-title {
+      font-size: clamp(38px, 5vw, 64px);
+
+      line-height: 1;
+    }
+
+    .skills-intro {
+      max-width: 400px;
+
+      color: var(--ink-soft);
+
+      font-size: 14px;
+    }
+
+    .skills-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .skill-row {
+      display: grid;
+
+      grid-template-columns: 190px 1fr;
+
+      gap: 40px;
+
+      padding: 27px 0;
+
+      border-bottom: 1px solid var(--line);
+
+      align-items: start;
+    }
+
+    .skill-name {
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 11px;
+
+      color: var(--ink-muted);
+
+      text-transform: uppercase;
+    }
+
+    .skill-items {
+      font-family: 'Fraunces', serif;
+
+      font-size: 23px;
+
+      line-height: 1.5;
+    }
+
+    .skill-items span:not(:last-child)::after {
+      content: "  ·  ";
+
+      color: var(--ink-muted);
+
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+
+    /* =====================================================
+       EXPERIENCE
+    ====================================================== */
+
+    .experience-grid {
+      display: grid;
+
+      grid-template-columns: .7fr 1.3fr;
+
+      gap: 80px;
+    }
+
+    .experience-title {
+      font-size: clamp(40px, 5vw, 65px);
+
+      line-height: .98;
+    }
+
+    .experience-item {
+      padding: 32px 0;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-item:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .experience-meta {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      margin-bottom: 13px;
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 11px;
+
+      color: var(--ink-muted);
+    }
+
+    .experience-item h3 {
+      font-size: 29px;
+
+      margin-bottom: 4px;
+    }
+
+    .company {
+      color: var(--accent);
+
+      font-size: 14px;
+
+      margin-bottom: 16px;
+    }
+
+    .experience-item p {
+      max-width: 680px;
+
+      color: var(--ink-soft);
+
+      font-size: 15px;
+    }
+
+    .experience-highlights {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-top: 18px;
+    }
+
+    .mini-tag {
+      padding: 5px 10px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 999px;
+
+      background: var(--paper);
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 10px;
+
+      color: var(--ink-soft);
+    }
+
+
+    /* =====================================================
+       PROJECTS
+    ====================================================== */
+
+    .projects-heading {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: end;
+
+      margin-bottom: 55px;
+    }
+
+    .projects-heading h2 {
+      font-size: clamp(42px, 6vw, 75px);
+
+      line-height: .95;
+    }
+
+    .projects-heading p {
+      max-width: 330px;
+
+      color: var(--ink-soft);
+
+      font-size: 14px;
+    }
+
+    .project {
+      display: grid;
+
+      grid-template-columns: .85fr 1.15fr;
+
+      gap: 65px;
+
+      padding: 60px 0;
+
+      border-top: 1px solid var(--line);
+
+      align-items: center;
+    }
+
+    .project.featured {
+      padding: 0 0 70px;
+
+      border-top: none;
+    }
+
+    .project-number {
+      margin-bottom: 16px;
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 11px;
+
+      color: var(--accent);
+    }
+
+    .project h3 {
+      font-size: clamp(32px, 4vw, 49px);
+
+      line-height: 1;
+
+      margin-bottom: 10px;
+    }
+
+    .project-company {
+      margin-bottom: 20px;
+
+      color: var(--accent);
+
+      font-size: 14px;
+    }
+
+    .project-description {
+      max-width: 520px;
+
+      color: var(--ink-soft);
+
+      font-size: 15px;
+
+      margin-bottom: 22px;
+    }
+
+    .project-tech {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+    }
+
+    .tech {
+      padding: 5px 9px;
+
+      background: var(--accent-soft);
+
+      border-radius: 5px;
+
+      color: var(--accent);
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 10px;
+    }
+
+
+    /* =====================================================
+       PROJECT IMAGE
+    ====================================================== */
+
+    .project-visual {
+      position: relative;
+
+      background: var(--paper);
+
+      border: 1px solid var(--line);
+
+      border-radius: 18px;
+
+      overflow: hidden;
+
+      box-shadow: 0 18px 45px rgba(23, 35, 49, .06);
+    }
+
+    .project-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      object-position: top; /* Memastikan gambar nempel di atas jika kotaknya lebih tinggi */
+      background: var(--paper-soft);
+    }
+
+    .visual-label {
+      position: absolute;
+
+      right: 14px;
+      bottom: 14px;
+
+      padding: 6px 10px;
+
+      background: rgba(255,255,255,.9);
+
+      border: 1px solid var(--line);
+
+      border-radius: 5px;
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 9px;
+
+      color: var(--ink-soft);
+    }
+
+
+    /* =====================================================
+       OTHER PROJECTS
+    ====================================================== */
+
+    .other-projects {
+      margin-top: 20px;
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+    .small-project {
+      padding: 32px;
+
+      background: var(--paper);
+
+      border: 1px solid var(--line);
+
+      border-radius: 16px;
+
+      transition: .25s ease;
+    }
+
+    .small-project:hover {
+      transform: translateY(-5px);
+
+      border-color: var(--line-strong);
+
+      box-shadow: 0 15px 35px rgba(23, 35, 49, .06);
+    }
+
+    .small-project .project-number {
+      margin-bottom: 28px;
+    }
+
+    .small-project h3 {
+      font-size: 28px;
+
+      margin-bottom: 8px;
+    }
+
+    .small-project .project-company {
+      margin-bottom: 13px;
+    }
+
+    .small-project p {
+      color: var(--ink-soft);
+
+      font-size: 14px;
+
+      margin-bottom: 20px;
+    }
+
+
+    /* =====================================================
+       ORGANIZATION
+    ====================================================== */
+
+    .outside-grid {
+      display: grid;
+
+      grid-template-columns: .7fr 1.3fr;
+
+      gap: 80px;
+    }
+
+    .outside-title {
+      font-size: clamp(40px, 5vw, 65px);
+
+      line-height: .98;
+    }
+
+    .org-card {
+      background: var(--paper);
+
+      border: 1px solid var(--line);
+
+      border-radius: 16px;
+
+      padding: 32px;
+    }
+
+    .org-date {
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 10px;
+
+      color: var(--ink-muted);
+
+      margin-bottom: 10px;
+    }
+
+    .org-card h3 {
+      font-size: 29px;
+
+      margin-bottom: 5px;
+    }
+
+    .org-role {
+      color: var(--accent);
+
+      font-size: 14px;
+
+      margin-bottom: 15px;
+    }
+
+    .org-card p {
+      color: var(--ink-soft);
+
+      font-size: 14px;
+
+      margin-bottom: 25px;
+    }
+
+    .org-gallery {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 10px;
+    }
+
+    .org-gallery img {
+      width: 100%;
+
+      height: 170px;
+
+      object-fit: cover;
+
+      border-radius: 9px;
+
+      background: var(--paper-soft);
+    }
+
+
+    /* =====================================================
+       CERTIFICATIONS
+    ====================================================== */
+
+    .cert-header {
+      display: grid;
+
+      grid-template-columns: .7fr 1.3fr;
+
+      gap: 80px;
+
+      margin-bottom: 45px;
+    }
+
+    .cert-header h2 {
+      font-size: clamp(42px, 5vw, 65px);
+
+      line-height: .98;
+    }
+
+    .cert-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .cert-row {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 25px;
+
+      padding: 24px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cert-name {
+      font-size: 16px;
+
+      font-weight: 500;
+    }
+
+    .cert-issuer {
+      color: var(--ink-soft);
+
+      font-size: 13px;
+
+      font-weight: 400;
+    }
+
+    .cert-date {
+      margin-top: 3px;
+
+      color: var(--ink-muted);
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 10px;
+    }
+
+    .cert-link {
+      padding: 8px 13px;
+
+      border: 1px solid var(--line-strong);
+
+      border-radius: 999px;
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 10px;
+
+      transition: .2s ease;
+    }
+
+    .cert-link:hover {
+      background: var(--ink);
+
+      border-color: var(--ink);
+
+      color: white;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ====================================================== */
+
+    .contact {
+      padding: 130px 0 80px;
+
+      border-bottom: none;
+    }
+
+    .contact-box {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 70px;
+
+      background: var(--ink);
+
+      color: white;
+
+      border-radius: 22px;
+    }
+
+    .contact-box::after {
+      content: "";
+
+      position: absolute;
+
+      width: 320px;
+      height: 320px;
+
+      right: -100px;
+      top: -150px;
+
+      border: 1px solid rgba(255,255,255,.15);
+
+      border-radius: 50%;
+    }
+
+    .contact-label {
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 10px;
+
+      color: rgba(255,255,255,.55);
+
+      text-transform: uppercase;
+
+      margin-bottom: 20px;
+    }
+
+    .contact-box h2 {
+      max-width: 720px;
+
+      font-size: clamp(43px, 6vw, 78px);
+
+      line-height: .95;
+
+      margin-bottom: 22px;
+    }
+
+    .contact-box > p {
+      max-width: 620px;
+
+      color: rgba(255,255,255,.68);
+
+      font-size: 15px;
+
+      margin-bottom: 35px;
+    }
+
+    .contact-links {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+
+      padding: 11px 16px;
+
+      border: 1px solid rgba(255,255,255,.22);
+
+      border-radius: 999px;
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 10px;
+
+      transition: .2s ease;
+    }
+
+    .contact-link:hover {
+      background: white;
+
+      color: var(--ink);
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ====================================================== */
+
+    footer {
+      padding: 25px 0 35px;
+
+      color: var(--ink-muted);
+
+      font-family: 'IBM Plex Mono', monospace;
+
+      font-size: 9px;
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+
+    /* =====================================================
+       ANIMATION
+    ====================================================== */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(24px);
+
+      transition:
+        opacity .7s ease,
+        transform .7s cubic-bezier(.16,1,.3,1);
+    }
+
+    .reveal.show {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .hero-grid,
+      .about-grid,
+      .experience-grid,
+      .project,
+      .outside-grid,
+      .cert-header {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 60px;
+      }
+
+      .hero-photo-wrap {
+        margin: 0 auto;
+
+        max-width: 340px;
+      }
+
+      .about-grid,
+      .experience-grid,
+      .outside-grid,
+      .cert-header {
+        gap: 40px;
+      }
+
+      .project {
+        gap: 35px;
+      }
+
+      .project.featured {
+        padding-bottom: 60px;
+      }
+
+      .skills-header {
+        display: block;
+      }
+
+      .skills-intro {
+        margin-top: 18px;
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .nav-inner {
+        padding: 14px 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .hero {
+        min-height: auto;
+
+        padding: 75px 0 85px;
+      }
+
+      .hero h1 {
+        font-size: clamp(55px, 18vw, 80px);
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .hero-photo-wrap {
+        max-width: 290px;
+
+        margin-right: 20px;
+      }
+
+      .photo-note {
+        left: -15px;
+      }
+
+      .skill-row {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+      }
+
+      .skill-items {
+        font-size: 20px;
+      }
+
+      .experience-meta {
+        display: block;
+      }
+
+      .experience-meta span + span {
+        display: block;
+
+        margin-top: 3px;
+      }
+
+      .project {
+        padding: 45px 0;
+      }
+
+      .project h3 {
+        font-size: 36px;
+      }
+
+      .other-projects {
+        grid-template-columns: 1fr;
+      }
+
+      .org-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .org-gallery img {
+        height: 190px;
+      }
+
+      .cert-row {
+        display: block;
+      }
+
+      .cert-link {
+        display: inline-block;
+
+        margin-top: 15px;
+      }
+
+      .contact {
+        padding-top: 80px;
+      }
+
+      .contact-box {
+        padding: 40px 25px;
+      }
+
+      .footer-inner {
+        display: block;
+      }
+
+      .footer-inner span + span {
+        display: block;
+
+        margin-top: 5px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVIGATION
+  ====================================================== -->
+
+  <nav class="nav">
+
+    <div class="nav-inner">
+
+      <a href="#" class="nav-logo">
+        tataa<span>.</span>
+      </a>
+
+      <div class="nav-links">
+
+        <a href="#tentang">Tentang</a>
+
+        <a href="#keahlian">Keahlian</a>
+
+        <a href="#pengalaman">Pengalaman</a>
+
+        <a href="#proyek">Proyek</a>
+
+        <a href="#kontak">Kontak</a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="hero-grid">
+
+
+          <div class="hero-content reveal">
+
+            <div class="availability">
+
+              <span class="availability-dot"></span>
+
+              Terbuka untuk kesempatan baru
+
+            </div>
+
+
+            <h1>
+              Halo, saya
+              <span>Tsaniyah Azzahra.</span>
+            </h1>
+
+
+            <p class="hero-description">
+
+              Pengembang sistem informasi yang senang mengubah 
+              kebutuhan dan permasalahan menjadi solusi berbasis teknologi 
+              yang mudah digunakan dan relevan dengan penggunanya.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+              <a href="#proyek" class="button primary">
+                Lihat proyek
+                <span>↓</span>
+              </a>
+
+              <a href="#kontak" class="button secondary">
+                Hubungi saya
+                <span>↗</span>
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="hero-photo-wrap reveal">
+
+            <div class="hero-photo-bg"></div>
+
+
+            <!-- GANTI FOTO DI SINI -->
+
+            <img
+              src="fotoProfile.jpeg"
+              alt="Foto Tsaniyah Azzahra"
+              class="hero-photo"
+            >
+
+
+            <div class="photo-note">
+
+              BEKASI, INDONESIA<br>
+              MANAJEMEN INFORMATIKA<br>
+              2026
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TENTANG
+    ====================================================== -->
+
+    <section id="tentang">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+
+          <div class="reveal">
+
+            <div class="section-label">
+              01 / Tentang saya
+            </div>
+
+            <h2 class="about-title">
+              Sedikit tentang<br>
+              saya.
+            </h2>
+
+          </div>
+
+
+
+          <div class="reveal">
+
+            <div class="about-text">
+
+              Saya adalah pengembang sistem informasi <i>full-stack</i> dengan
+              pengalaman dalam merancang aplikasi berbasis web maupun <i>mobile</i>
+              secara menyeluruh (<i>end-to-end</i>).
+
+              <br><br>
+
+              Berbekal pengalaman magang dan proyek profesional, saya terbiasa mengerjakan
+              seluruh siklus pengembangan—mulai dari menyusun arsitektur <strong>database</strong> 
+              yang efisien, merancang logika <strong>backend</strong> yang andal, hingga 
+              menciptakan <strong>antarmuka pengguna</strong> yang interaktif.
+
+              <br><br>
+
+              Ketertarikan terbesar saya terletak pada efisiensi proses bisnis. Saya sangat 
+              menikmati proses menerjemahkan alur kerja yang masih manual atau berulang 
+              menjadi sebuah ekosistem digital terintegrasi yang membuat pengolahan 
+              data menjadi jauh lebih akurat, cepat, dan mudah dipantau.
+
+            </div>
+
+            <div class="about-note">
+
+              Saat mengembangkan sistem, saya tidak hanya
+              memperhatikan bagaimana fitur dibuat, tetapi juga
+              bagaimana fitur tersebut digunakan dalam proses
+              kerja sehari-hari.
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         KEAHLIAN
+    ====================================================== -->
+
+    <section id="keahlian">
+
+      <div class="container">
+
+
+        <div class="skills-header reveal">
+
+          <div>
+
+            <div class="section-label">
+              02 / Keahlian
+            </div>
+
+            <h2 class="skills-title">
+              Yang saya<br>
+              gunakan.
+            </h2>
+
+          </div>
+
+
+          <p class="skills-intro">
+
+            Beberapa teknologi dan tools yang pernah saya
+            gunakan dalam proyek akademik maupun pengembangan
+            sistem di lingkungan perusahaan.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="skills-list">
+
+
+          <div class="skill-row reveal">
+
+            <div class="skill-name">
+              Backend
+            </div>
+
+            <div class="skill-items">
+
+              <span>PHP (CodeIgniter, Laravel)</span>
+              <span>C# (.NET)</span>
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>RESTful API Development</span>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="skill-row reveal">
+
+            <div class="skill-name">
+              Frontend
+            </div>
+
+            <div class="skill-items">
+
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>React.js</span>
+              <span>React Native</span>
+
+            </div>
+
+          </div>
+
+          
+
+          <div class="skill-row reveal">
+
+            <div class="skill-name">
+              Database
+            </div>
+
+            <div class="skill-items">
+
+              <span>SQL Server</span>
+              <span>MySQL</span>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="skill-row reveal">
+
+            <div class="skill-name">
+              Data & Tools
+            </div>
+
+            <div class="skill-items">
+
+              <span>Power BI</span>
+              <span>Looker Studio</span>
+              <span>Power Apps</span>
+              <span>Figma</span>
+              <span>Highcharts</span>
+              <span>PhpSpreadsheet</span>
+              <span>GitHub/Git</span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PENGALAMAN
+    ====================================================== -->
+
+    <section id="pengalaman">
+
+      <div class="container">
+
+
+        <div class="experience-grid">
+
+
+          <div class="reveal">
+
+            <div class="section-label">
+              03 / Pengalaman
+            </div>
+
+            <h2 class="experience-title">
+              Pernah<br>
+              mengerjakan<br>
+              apa?
+            </h2>
+
+          </div>
+
+
+
+          <div>
+
+
+            <article class="experience-item reveal">
+
+              <div class="experience-meta">
+
+                <span>
+                  JAN 2026 — JUL 2026
+                </span>
+
+                <span>
+                  MAGANG
+
+                </span>
+
+              </div>
+
+
+              <h3>
+                Web Developer
+              </h3>
+
+
+              <div class="company">
+                PT Aisin Indonesia · Departemen Quality Assurance
+              </div>
+
+
+              <p>
+
+                Terlibat dalam pengembangan sistem informasi
+                untuk mendukung proses kerja Quality Assurance,
+                termasuk digitalisasi proses kalibrasi alat ukur
+                dan request layout inspection part.
+
+              </p>
+
+
+              <div class="experience-highlights">
+
+                <span class="mini-tag">
+                  Sistem Kalibrasi
+                </span>
+
+                <span class="mini-tag">
+                  Sistem Request Layout Inspection Part
+                </span>
+
+                <span class="mini-tag">
+                  Dashboard
+                </span>
+
+              </div>
+
+            </article>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROYEK
+    ====================================================== -->
+
+    <section id="proyek">
+
+      <div class="container">
+
+
+        <div class="projects-heading reveal">
+
+          <div>
+
+            <div class="section-label">
+              04 / Proyek pilihan
+            </div>
+
+            <h2>
+              Beberapa proyek<br>
+              yang pernah dibuat.
+            </h2>
+
+          </div>
+
+
+          <p>
+
+            Proyek yang saya kerjakan dari pengalaman magang,
+            tugas akhir, maupun proyek selama perkuliahan.
+
+          </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             PROJECT 01
+        ========================== -->
+
+        <article class="project featured">
+
+
+          <div class="project-info reveal">
+
+            <div class="project-number">
+              01 — TUGAS AKHIR
+            </div>
+
+
+            <h3>
+              Request Layout<br>
+              Inspection Part
+            </h3>
+
+
+            <div class="project-company">
+              PT Aisin Indonesia · April 2026 - Juni 2026
+            </div>
+
+
+            <p class="project-description">
+
+              Sistem informasi untuk membantu pengelolaan
+              request inspeksi part di Departemen Quality
+              Assurance. Sistem menyediakan informasi status
+              pengerjaan dan membantu requestor mendapatkan
+              pembaruan tanpa harus datang langsung untuk
+              menanyakan progres.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span class="tech">
+                PHP (CodeIgniter 3)
+              </span>
+
+              <span class="tech">
+                SQL Server
+              </span>
+
+              <span class="tech">
+                Google Sheets API
+              </span>
+
+              <span class="tech">
+                Highcharts
+              </span>
+
+              <span class="tech">
+                Chatbot WhatsApp
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="project-visual reveal">
+
+            <!-- GANTI DENGAN SCREENSHOT PROJECT -->
+
+            <img
+              src="fotoLayoutInspec_1.png"
+              alt="Tangkapan layar Sistem Request Layout Inspection Part menggunakan data dummy yang telah dimodifikasi untuk keperluan portofolio."
+            >
+
+            <div class="visual-label" title="Tangkapan layar Sistem Request Layout Inspection Part menggunakan data dummy yang telah dimodifikasi untuk keperluan portofolio.">
+              TUGAS AKHIR · 2026
+            </div>
+
+          </div>
+
+
+        </article>
+
+
+
+        <!-- =========================
+             PROJECT 02
+        ========================== -->
+
+        <article class="project">
+
+
+          <div class="project-info reveal">
+
+            <div class="project-number">
+              02 — PEKERJAAN MAGANG
+            </div>
+
+
+            <h3>
+              Sistem Manajemen
+              Kalibrasi
+            </h3>
+
+
+            <div class="project-company">
+              PT Aisin Indonesia · Januari 2026 - April 2026
+            </div>
+
+
+            <p class="project-description">
+
+              Sistem untuk mendukung pengelolaan data alat
+              ukur, jadwal kalibrasi, pencatatan hasil kalibrasi,
+              hingga penyimpanan riwayat kalibrasi secara digital.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span class="tech">
+                PHP (CodeIgniter 3)
+              </span>
+
+              <span class="tech">
+                SQL Server
+              </span>
+
+              <span class="tech">
+                Highcharts
+              </span>
+
+              <span class="tech">
+                PhpSpreadsheet
+              </span>
+
+              <span class="tech">
+                mPDF
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="project-visual reveal">
+
+            <img
+              src="fotoKalibrasi_1.png"
+              alt="Dashboard Sistem Manajemen Kalibrasi QA, menampilkan data dummy untuk menjaga kerahasiaan informasi perusahaan."
+            >
+
+            <div class="visual-label" title="Dashboard Sistem Manajemen Kalibrasi QA, menampilkan data dummy untuk menjaga kerahasiaan informasi perusahaan.">
+              SISTEM KALIBRASI
+            </div>
+
+          </div>
+
+
+        </article>
+
+
+
+        <!-- =========================
+             PROJECT LAINNYA
+        ========================== -->
+
+        <div class="other-projects">
+
+
+          <!-- GS BATTERY -->
+
+          <article class="small-project reveal">
+
+            <div class="project-number">
+              03 — WEB DEVELOPMENT
+            </div>
+
+
+            <h3>
+              Sistem Digital Human Capital Recruitment
+            </h3>
+
+
+            <div class="project-company">
+              PT GS Battery · 2025-2026
+            </div>
+
+
+            <p>
+
+              Sistem berbasis web untuk mendukung proses
+              recruitment, mulai dari pengelolaan lowongan,
+              data kandidat, penjadwalan proses seleksi,
+              hingga pemantauan status kandidat.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span class="tech">
+                C#
+              </span>
+
+              <span class="tech">
+                ASP.NET
+              </span>
+
+              <span class="tech">
+                DevExpress
+              </span>
+
+              <span class="tech">
+                SQL Server
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- ESSA -->
+
+          <article class="small-project reveal">
+
+            <div class="project-number">
+              04 — WEB DEVELOPMENT
+            </div>
+
+
+            <h3>
+              Overtime Collecting Application
+            </h3>
+
+
+            <div class="project-company">
+              Politeknik Astra · 2024
+            </div>
+
+
+            <p>
+
+              Aplikasi untuk mendukung proses pengajuan dan
+              pengelolaan lembur karyawan di Politeknik Astra dengan 
+              alur persetujuan serta pemantauan status pengajuan.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span class="tech">
+                C#
+              </span>
+
+              <span class="tech">
+                ASP.NET
+              </span>
+
+              <span class="tech">
+                PHP (Laravel)
+              </span>
+
+              <span class="tech">
+                SQL Server
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- RAVELLO -->
+
+          <article class="small-project reveal">
+
+            <div class="project-number">
+              05 — MOBILE DEVELOPMENT
+            </div>
+
+
+            <h3>
+              Ravello
+            </h3>
+
+
+            <div class="project-company">
+              Politeknik Astra · 2025
+            </div>
+
+
+            <p>
+
+              Aplikasi mobile untuk membantu pengguna
+              menemukan informasi kuliner, memberikan ulasan,
+              serta berbagi foto dan informasi tempat.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span class="tech">
+                React Native
+              </span>
+
+              <span class="tech">
+                Java Spring Boot
+              </span>
+
+              <span class="tech">
+                SQL Server
+              </span>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ORGANISASI
+    ====================================================== -->
+
+    <section>
+
+      <div class="container">
+
+
+        <div class="outside-grid">
+
+
+          <div class="reveal">
+
+            <div class="section-label">
+              05 / Di luar proyek
+            </div>
+
+            <h2 class="outside-title">
+              Nggak cuma<br>
+              ngoding.
+            </h2>
+
+          </div>
+
+
+
+          <div class="org-card reveal">
+
+            <div class="org-date">
+              AGUSTUS 2023 — JANUARI 2024
+            </div>
+
+
+            <h3>
+              BEM Politeknik Astra
+            </h3>
+
+
+            <div class="org-role">
+              Staff Departemen Sosial
+            </div>
+
+
+            <p>
+
+              Terlibat dalam kegiatan sosial dan program
+              pengabdian, termasuk kegiatan berbagi,
+              pengenalan teknologi kepada masyarakat,
+              serta koordinasi kegiatan mahasiswa.
+
+            </p>
+
+
+            <div class="org-gallery">
+
+              <!-- GANTI FOTO ORGANISASI -->
+
+              <img
+                src="bem-1.jpg"
+                alt="Kegiatan BEM"
+              >
+
+              <img
+                src="bem-2.jpg"
+                alt="Kegiatan BEM"
+              >
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SERTIFIKASI
+    ====================================================== -->
+
+    <section>
+
+      <div class="container">
+
+
+        <div class="cert-header">
+
+
+          <div class="reveal">
+
+            <div class="section-label">
+              06 / Sertifikasi
+            </div>
+
+            <h2>
+              Yang pernah<br>
+              saya pelajari.
+            </h2>
+
+          </div>
+
+
+          <div class="cert-list">
+
+
+            <div class="cert-row reveal">
+
+              <div>
+
+                <div class="cert-name">
+
+                  MTCNA
+
+                  <span class="cert-issuer">
+                    — MikroTik
+                  </span>
+
+                </div>
+
+                <div class="cert-date">
+                  Desember 2025
+                </div>
+
+              </div>
+
+
+              <a
+                href="https://drive.google.com/file/d/15V5RQWwplzWXhC1I-YUamnFvOMfNroGF/view?usp=sharing"
+                class="cert-link"
+                target="_blank"
+              >
+                Lihat sertifikat ↗
+              </a>
+
+            </div>
+
+            <div class="cert-row reveal">
+
+              <div>
+
+                <div class="cert-name">
+
+                  Business Analytics with Excel
+
+                  <span class="cert-issuer">
+                    — SimpliLearn
+                  </span>
+
+                </div>
+
+                <div class="cert-date">
+                  Desember 2025
+                </div>
+
+              </div>
+
+
+              <a
+                href="https://drive.google.com/file/d/128uoTDbKb2aAH6RFwSE7ZMVgwHvSE8D0/view?usp=sharing"
+                class="cert-link"
+                target="_blank"
+              >
+                Lihat sertifikat ↗
+              </a>
+
+            </div>
+
+            <div class="cert-row reveal">
+
+              <div>
+
+                <div class="cert-name">
+
+                  Linux Fundamental
+
+                  <span class="cert-issuer">
+                    — ID-Networkers
+                  </span>
+
+                </div>
+
+                <div class="cert-date">
+                  Maret 2024
+                </div>
+
+              </div>
+
+
+              <a
+                href="https://drive.google.com/file/d/1YrUv6rtLFQJbGqc36c2LuckErDoTkdeR/view?usp=sharing"
+                class="cert-link"
+                target="_blank"
+              >
+                Lihat sertifikat ↗
+              </a>
+
+            </div>
+
+            <div class="cert-row reveal">
+
+              <div>
+
+                <div class="cert-name">
+
+                  Linux Netacad
+
+                  <span class="cert-issuer">
+                    — Cisco Networking Academy
+                  </span>
+
+                </div>
+
+                <div class="cert-date">
+                  Maret 2024
+                </div>
+
+              </div>
+
+
+              <a
+                href="https://drive.google.com/file/d/15pXg_gRBOeEWnouF9_m5zt6MVFaQ-XIv/view?usp=sharing"
+                class="cert-link"
+                target="_blank"
+              >
+                Lihat sertifikat ↗
+              </a>
+
+            </div>
+
+            <div class="cert-row reveal">
+
+              <div>
+
+                <div class="cert-name">
+
+                  Virtual Machine Fundamental
+
+                  <span class="cert-issuer">
+                    — Aguna Course
+                  </span>
+
+                </div>
+
+                <div class="cert-date">
+                  Februari 2024
+                </div>
+
+              </div>
+
+
+              <a
+                href="https://drive.google.com/file/d/1iv882h6UmyuH7v6XS0T4RIAWB52T50nd/view?usp=sharing"
+                class="cert-link"
+                target="_blank"
+              >
+                Lihat sertifikat ↗
+              </a>
+
+            </div>
+
+            
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section id="kontak" class="contact">
+
+      <div class="container">
+
+
+        <div class="contact-box reveal">
+
+
+          <div class="contact-label">
+            07 / Mari terhubung
+          </div>
+
+
+          <h2>
+            Ada kesempatan
+            atau proyek menarik?
+          </h2>
+
+
+          <p>
+
+            Saya terbuka untuk kesempatan kerja,
+            diskusi proyek, maupun kesempatan untuk
+            belajar dan berkembang di lingkungan baru.
+
+          </p>
+
+
+          <div class="contact-links">
+
+            <!-- ICON EMAIL -->
+            <a
+              href="mailto:aratsaniyah97@gmail.com"
+              class="contact-link"
+              aria-label="Email"
+              style="padding: 12px;"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+
+            <!-- ICON LINKEDIN -->
+            <a
+              href="https://linkedin.com/in/tsaniyah-azzahra"
+              target="_blank"
+              class="contact-link"
+              aria-label="LinkedIn"
+              style="padding: 12px;"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+
+            <!-- ICON TELEPON -->
+            <a
+              href="tel:+6285961131216"
+              class="contact-link"
+              aria-label="Telepon"
+              style="padding: 12px;"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <span>
+          © 2026 Tsaniyah Azzahra
+        </span>
+
+        <span>
+          Dibuat dengan rasa penasaran dan banyak debugging.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+    /* =========================================
+       SCROLL REVEAL
+    ========================================== */
+
+    const revealElements =
+      document.querySelectorAll('.reveal');
+
+
+    const observer =
+      new IntersectionObserver(
+
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add('show');
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    revealElements.forEach((element) => {
+
+      observer.observe(element);
+
+    });
+
+
+  </script>
+
+
+</body>
+</html>
